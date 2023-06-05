@@ -50,24 +50,44 @@ use ('sample_BeautyDB');
 
 // creacion de esquema de permisos
 
-db.createCollection("permisos",{
-  validator:{
-      $jsonSchema:{
-          bsonType: "object",
-          required: ["id_permiso","estado"],
-          properties:{
-              id_permiso:{
-                  bsonType: "int",
-                  description: "el id debe ser tipo int"
-              },
-              estado:{
-                  bsonType: "bool",
-                  description: "el estado debe ser booleano"
-              }
-          }
-      }
-  }
-})
+// db.createCollection("permisos",{
+//   validator:{
+//       $jsonSchema:{
+//           bsonType: "object",
+//           required: ["id_permiso","estado"],
+//           properties:{
+//               id_permiso:{
+//                   bsonType: "int",
+//                   description: "el id debe ser tipo int"
+//               },
+//               estado:{
+//                   bsonType: "bool",
+//                   description: "el estado debe ser booleano"
+//               }
+//           }
+//       }
+//   }
+// })
+
+// Creacion de esquema Rol  
 
 
 
+db.createCollection("roles",{
+        validator:{
+            $jsonSchema:{
+                bsonType: "object",
+                required: ["id_rol","estado",],
+                properties:{
+                    estado:{
+                        bsonType: "bool",
+                        description: "el estado debe ser booleano"
+                    },
+                    id_rol:{
+                        bsonType: "int",
+                        description: "solo enteros"
+                    }
+                }
+            }
+        }
+    })

@@ -176,55 +176,55 @@ const uri = "mongodb+srv://fernando:1001@cluster0.xypm0bq.mongodb.net/?retryWrit
 // Roles   
 
 
-// async function createSampleData(nuevaPropiedad) {
-  // const client = new MongoClient(uri)
-  //       try {
-  //         await client.connect();
+async function createSampleData(nuevaPropiedad) {
+  const client = new MongoClient(uri)
+        try {
+          await client.connect();
       
-  //         const result = await client.db('sample_BeautyDB').collection('permisos').insertMany(nuevaPropiedad);
-  //         console.log(`êl resultado es ${result.insertId}`)
-  //       }catch(e){
-  //         console.error(e)
+          const result = await client.db('sample_BeautyDB').collection('roles').insertMany(nuevaPropiedad);
+          console.log(`êl resultado es ${result.insertId}`)
+        }catch(e){
+          console.error(e)
   
-  //       }finally{
-  //         await client.close()
-  //       }
-  //     }
+        }finally{
+          await client.close()
+        }
+      }
   
-  //     for(let i = 0; i<100; i++){
-  //         createSampleData([
-  //           {
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           },{
-  //             "id_permiso": faker.number.int({min: 1, max: 10}),
-  //             "estado": faker.datatype.boolean()
-  //           }
-  //           ]
-  //         )
-  //     }
+      for(let i = 0; i<100; i++){
+          createSampleData([
+            {
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            },{
+              "id_rol": faker.number.int({min: 1, max: 4}),
+              "estado": faker.datatype.boolean()
+            }
+            ]
+          )
+      }
 
