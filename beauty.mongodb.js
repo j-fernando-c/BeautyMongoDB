@@ -1,15 +1,15 @@
 //importacion de librerias
 
-// const uri = mongodb+srv:fernando:1001@cluster0.xypm0bq.mongodb.net
+const uri = "mongodb+srv://fernando:1001@cluster0.xypm0bq.mongodb.net/?retryWrites=true&w=majority";
 
-// const { MongoClient } = require("mongodb");
-// const { faker } = require('@faker-js/faker');
-// const client = new MongoClient(uri);
+const { MongoClient } = require("mongodb");
+const { faker } = require('@faker-js/faker');
+const client = new MongoClient(uri);
 
 
 
 //creacion de base de datos
-// use ('sample_BeautyDB');
+
 
 
 //Creacion de coleccion de usuarios
@@ -69,44 +69,6 @@
 //     }
 //  })
 
-
-
-// async function createSampleData() {
-
-//   try {
-//     await client.connect();
-
-//     const collection = client.db('sample_BeautyDB').collection('usuarios');
-
-    // Generar datos de muestra utilizando Faker
-//     const sampleData = [];
-//     const numUsers = 100;
-
-//     for (let i = 0; i < numUsers; i++) {
-//       const usuario = {
-//         id_usuario: faker.random.number(),
-//         correo: faker.internet.email(),
-//         nombre: faker.name.firstName(),
-//         apellido: faker.name.lastName(),
-//         contraseña: faker.internet.password(),
-//         id_rol: faker.random.arrayElement([1, 2, 3]),
-//         estado: faker.random.arrayElement(['activo', 'inactivo'])
-//       };
-
-//       sampleData.push(usuario);
-//     }
-
-//     // Insertar los datos de muestra en la colección
-//     await collection.insertMany(sampleData);
-//     console.log('Datos de muestra creados exitosamente.');
-//   } catch (error) {
-//     console.error('Error al crear los datos de muestra:', error);
-//   } finally {
-//     await client.close();
-//   }
-// }
-
-// createSampleData();
 
 
 //Creacion de coleccion de usuarios

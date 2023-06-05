@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "mongodb": "^5.5.0"
-  }
+  },
+  "name": "mongodb-",
+  "description": "",
+  "version": "1.0.0",
+  "main": "beauty.mongodb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
