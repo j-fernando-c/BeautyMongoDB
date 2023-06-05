@@ -71,8 +71,7 @@ const client = new MongoClient(uri);
 
 
 
-//Creacion de coleccion de usuarios
-// db.createCollection("roles");
+// ------------------------Roles-----------------
 
 //creacion de esquema de rol
 
